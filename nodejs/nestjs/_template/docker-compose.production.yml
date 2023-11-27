@@ -5,6 +5,6 @@ services:
     image: ghcr.io/libertech-fr/app.api:latest
     container_name: ${APP_NAME:-app.api}
     restart: unless-stopped
-    env_file: ./volumes/ui/.env
+    env_file: ./volumes/api/.env
     ports:
-      - "${APP_PORT:-4545}:4545"
+      - "${APP_PORT:-4000}:4000"

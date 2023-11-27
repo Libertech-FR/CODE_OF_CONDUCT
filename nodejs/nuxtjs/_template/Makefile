@@ -1,7 +1,7 @@
 #!make
 include .env
 
-DEV_CONTAINER_NAME?=app.api
+DEV_CONTAINER_NAME?=app.ui
 
 .DEFAULT_GOAL := help
 help:

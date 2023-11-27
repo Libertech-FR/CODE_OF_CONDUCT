@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  app.ui:
+    image: ghcr.io/libertech-fr/app.ui:latest
+    container_name: ${APP_NAME:-app.ui}
+    restart: unless-stopped
+    env_file: ./volumes/ui/.env
+    ports:
+      - "${APP_PORT:-3000}:3000"
