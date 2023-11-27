@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  app.api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: no
+    container_name: ${APP_NAME:-app.api}
+    ports:
+      - "${APP_PORT:-4545}:4545"
+    volumes:
+      - ./:/data
+    networks: ['dev']
+    environment:
+      - NODE_ENV=development
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    command: yarn start:debug
+
+networks:
+  dev:
+    external: true
