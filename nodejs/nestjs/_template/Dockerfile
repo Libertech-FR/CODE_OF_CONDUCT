@@ -31,7 +31,7 @@ WORKDIR /data
 #   && yarn autoclean --init \
 #   && yarn autoclean --force
 
-# COPY --from=builder /usr/src/app/dist ./dist
+# COPY --from=builder /data/dist ./dist
 
 EXPOSE 4000
 
