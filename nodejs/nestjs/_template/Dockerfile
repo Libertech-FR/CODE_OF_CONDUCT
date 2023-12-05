@@ -10,6 +10,8 @@ COPY . .
 #   --non-interactive \
 #   --production=false
 
+# RUN yarn run build
+
 FROM node:18-bookworm-slim as production
 
 ARG NODE_ENV=production
